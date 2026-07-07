@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
+import { useParallax } from "../../components/hooks/ParallaxImage";
+import { useRef } from "react";
 
 const Landing = () => {
+  const imageRef = useRef(null);
+  const { y, scale } = useParallax(imageRef);
   return (
-    <div className="relative h-screen overflow-hidden">
-      <img
+    <div ref={imageRef} className="relative h-screen overflow-hidden">
+      <motion.img
+        style={{ y, scale }}
         src={
           "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%206,%202026,%2011_40_23%20PM.png"
         }
