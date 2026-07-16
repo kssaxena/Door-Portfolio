@@ -41,7 +41,8 @@ const Landing = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="flex justify-between items-center w-full px-40 py-20">
+    <div className="flex justify-between items-center w-full px-40 py-20 relative">
+      <p className="absolute top-20 left-20 text-xs uppercase ">obs 01</p>
       <div className="w-[40%] flex flex-col justify-start items-start gap-10">
         <h1 className="text-[80px] leading-20 font-instrumentRegular tracking-tighter font-extralight">
           Spaces that reveal themselves{" "}
