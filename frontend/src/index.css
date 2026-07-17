@@ -4,25 +4,25 @@
 
 @font-face {
   font-family: "GuntertestRegular";
-  src: url("../public/fonts/guntertest-regular.otf") format("opentype");
+  src: url("/fonts/guntertest-regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "DosisLight";
-  src: url("../public/fonts/dosis.light.ttf") format("opentype");
+  src: url("/fonts/dosis.light.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "InstrumentItalic";
-  src: url("../public/fonts/instrumentserif-italic.ttf") format("opentype");
+  src: url("/fonts/instrumentserif-italic.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "InstrumentRegular";
-  src: url("../public/fonts/instrumentserif-regular.ttf") format("opentype");
+  src: url("/fonts/instrumentserif-regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
