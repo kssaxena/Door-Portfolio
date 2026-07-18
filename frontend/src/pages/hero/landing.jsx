@@ -11,18 +11,20 @@ const Landing = () => {
       <p className="absolute top-20 left-20 text-xs uppercase ">obs 01</p>
       <div className="w-[40%] flex flex-col justify-start items-start gap-10">
         <h1 className="text-[80px] leading-20 font-instrumentRegular tracking-tighter font-extralight">
-          Spaces that reveal themselves{" "}
+          Doors that define the first impression{" "}
           <span className="font-instrumentItalic text-[#6A4F3B]">
-            gradually
+            impression
           </span>
           .
         </h1>
         <div className="border-[0.5px] w-10" />
         <h1>
-          Designed for studios that document atmosphere, material, and use
-          through observation rather than promotion.
+          Every entrance is the beginning of a story. Crafted with precision
+          engineering and refined detailing, Aarcane Doors combine security,
+          durability, and timeless design for homes that deserve an
+          extraordinary welcome.
         </h1>
-        <Button label={"view products"} />
+        <Button label={"Explore Collection"} />
       </div>
       <div
         className="w-[60%]"
@@ -34,7 +36,7 @@ const Landing = () => {
             style={{ y, scale }}
             className="w-full h-full object-cover"
             src={
-              "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%206,%202026,%2011_40_23%20PM.png"
+              "https://ik.imagekit.io/jarvisai/Arcane%20Doors/Hero_landing.png"
             }
           />
         </div>

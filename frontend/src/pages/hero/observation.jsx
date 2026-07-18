@@ -42,8 +42,8 @@ const Observation = () => {
         {/* <div className="border-[0.5px] w-10" /> */}
         <div className="flex justify-start items-start gap-20 ">
           <p className="w-72 leading-6 text-right">
-            Short studies, field observations, and material notes collected
-            between projects.
+            Explore handcrafted collections designed for modern homes, luxury
+            villas, architects, and interior designers.
           </p>
         </div>
       </div>
