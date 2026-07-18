@@ -43,7 +43,7 @@ const MaterialStudy = () => {
           </span>{" "}
           of surfaces, weight, and touch.
         </h1>
-        <p className="w-[40%]">
+        <p className="w-[40%] text-right">
           Materials are presented as studies rather than samples. Observed,
           narrated, and placed in relation to the rooms they shape.
         </p>
