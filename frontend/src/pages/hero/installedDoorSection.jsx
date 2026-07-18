@@ -46,11 +46,11 @@ const InstalledDoorSection = () => {
   return (
     <div className="flex flex-col justify-center items-end w-fit px-40 py-20 gap-10 bg-[#26211C] text-[#F6F2EA]">
       <h1 className="text-[56px] leading-12 font-instrumentRegular tracking-tighter font-extralight indent-8">
-        Two studies{" "}
+        Collections engineered for{" "}
         <span className="font-instrumentItalic text-[#6A4F3B]">
-          documenting
+          security, elegance,
         </span>{" "}
-        <br /> material, light, and use.
+        <br /> and longevity.
       </h1>
       <Card />
     </div>

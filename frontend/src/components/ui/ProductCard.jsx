@@ -22,7 +22,7 @@ const ProductCard = ({ data = mappingData }) => {
           </h1>
           <p className="text-[18px]">{d.description}</p>
           <div className="border-[0.5px] w-10" />
-          <Button label={"view details"} />
+          <Button label={"Explore Collection"} />
         </div>
       </div>
     </div>
@@ -37,15 +37,14 @@ const MaterialStudy = () => {
       </p>
       <div className="flex justify-between items-start gap-60 py-10">
         <h1 className="text-[56px] leading-12 font-instrumentRegular tracking-tighter font-extralight w-[60%]">
-          A{" "}
-          <span className="font-instrumentItalic text-[#6A4F3B]">
-            vocabulary
-          </span>{" "}
-          of surfaces, weight, and touch.
+          Materials chosen for{" "}
+          <span className="font-instrumentItalic text-[#6A4F3B]">strength</span>{" "}
+          crafted for generations.
         </h1>
         <p className="w-[40%] text-right">
-          Materials are presented as studies rather than samples. Observed,
-          narrated, and placed in relation to the rooms they shape.
+          Engineered steel, premium finishes, advanced coatings, and precision
+          manufacturing combine to create doors that resist corrosion, termites,
+          moisture, and daily wear while maintaining exceptional beauty.{" "}
         </p>
       </div>
       <ProductCard />
