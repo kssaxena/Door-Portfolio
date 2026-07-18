@@ -1,37 +1,6 @@
-const DoorTypes = () => {
-  const data = [
-    {
-      image:
-        "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%207,%202026,%2004_42_06%20PM.png",
-      label: "villa doors",
-    },
-    {
-      image:
-        "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%207,%202026,%2004_28_18%20PM.png",
-      label: "main doors",
-    },
-    {
-      image:
-        "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%207,%202026,%2004_39_51%20PM.png",
-      label: "designer doors",
-    },
-    {
-      image:
-        "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%207,%202026,%2004_32_49%20PM.png",
-      label: "bedroom doors",
-    },
-    {
-      image:
-        "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%207,%202026,%2004_35_25%20PM.png",
-      label: "flush doors",
-    },
+import { data } from "../../constants/constants";
 
-    {
-      image:
-        "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Jun%207,%202026,%2004_45_26%20PM.png",
-      label: "bathroom doors",
-    },
-  ];
+const DoorTypes = () => {
   return (
     <div className="px-40 py-20 relative">
       <p className="absolute top-20 left-20 text-xs ">POSITION</p>
