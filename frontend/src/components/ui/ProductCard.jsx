@@ -1,5 +1,5 @@
 import { MdDescription } from "react-icons/md";
-import Button from "../Button";
+import ButtonWrapper from "../Button";
 import { mappingData } from "../../constants/constants";
 
 const ProductCard = ({ data = mappingData }) => {
@@ -22,7 +22,7 @@ const ProductCard = ({ data = mappingData }) => {
           </h1>
           <p className="text-[18px]">{d.description}</p>
           <div className="border-[0.5px] w-10" />
-          <Button label={"Explore Collection"} />
+          <ButtonWrapper label={"Explore Collection"} />
         </div>
       </div>
     </div>

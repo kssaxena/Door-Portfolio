@@ -1,4 +1,4 @@
-import Button from "../../components/Button";
+import ButtonWrapper from "../../components/Button";
 import { mappingData4 } from "../../constants/constants";
 
 const Process = () => {
@@ -19,7 +19,7 @@ const Process = () => {
               </h1>
               <div className="border-[0.5px] w-10" />
               <p className="text-[17px]">{data.description}</p>
-              {/* <Button label={"continue reading"} /> */}
+              {/* <ButtonWrapper label={"continue reading"} /> */}
             </div>
           </div>
         ))}

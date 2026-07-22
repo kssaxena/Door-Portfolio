@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useParallax } from "../../components/hooks/ParallaxImage";
 import { useRef } from "react";
-import Button from "../../components/Button";
+import ButtonWrapper from "../../components/Button";
 import { mappingData2 } from "../../constants/constants";
 
 const InstalledDoorSection = () => {
@@ -23,7 +23,7 @@ const InstalledDoorSection = () => {
               </h1>
               <div className="border-[0.5px] w-10" />
               <p>{data.description}</p>
-              <Button label={"view study"} />
+              <ButtonWrapper label={"view study"} />
             </div>
             <div
               className="w-[70%] h-full overflow-hidden rounded-sm bg-red-400 justify-center items-center flex"
