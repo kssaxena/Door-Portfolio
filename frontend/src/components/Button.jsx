@@ -1,8 +1,8 @@
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-const Button = ({ label, onClick }) => {
+const ButtonWrapper = ({ label, onClick, type = "" }) => {
   return (
-    <button className="text-sm capitalize group" onClick={onClick}>
+    <button className="text-sm capitalize group" onClick={onClick} type={type}>
       <h1 className="flex justify-center items-end truncate">
         {label}{" "}
         <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out" />
@@ -13,4 +13,4 @@ const Button = ({ label, onClick }) => {
   );
 };
 
-export default Button;
+export default ButtonWrapper;

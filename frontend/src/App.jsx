@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[#F6F2EA] text-neutral-700 font-dosis text-[20px]">
+    <div className="bg-[#F6F2EA] text-neutral-700 font-dosis text-[20px] selection:bg-neutral-500 selection:text-neutral-200">
       <Header />
       <AppRoutes />
       <Footer />
