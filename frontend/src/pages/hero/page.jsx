@@ -1,4 +1,5 @@
 // import ProductCard from "../../components/ui/ProductCard";
+import EnquiryForm from "../../components/EnquiryForm";
 import MaterialStudy from "../../components/ui/ProductCard";
 import DoorSpecialization from "./doorSpecialization";
 import DoorTypes from "./doorTypes";
@@ -16,6 +17,7 @@ const Hero = () => {
       <InstalledDoorSection />
       <Observation />
       <Process />
+      <EnquiryForm />
     </div>
   );
 };
