@@ -90,8 +90,7 @@ export const mappingData3 = [
       "Doors, reveals, steps, and changes in floor finish create a slower rhythm through the room.",
   },
   {
-    image:
-      "https://ik.imagekit.io/jarvisai/Arcane%20Doors/Hero_SmallCard3.png",
+    image: "https://ik.imagekit.io/jarvisai/Arcane%20Doors/Hero_SmallCard3.png",
     heading: "material note",
     quotation: "We offer for ages",
     description:
@@ -126,4 +125,10 @@ export const headerNavigation = [
   { label: "About", url: "#" },
   { label: "Products", url: "#" },
   { label: "Enquiry", url: "#" },
+];
+
+export const FormInputs = [
+  { label: "name", normalInput: true, type: "text" },
+  { label: "email", normalInput: true, type: "email" },
+  { label: "description", normalInput: false, type: "text" },
 ];
