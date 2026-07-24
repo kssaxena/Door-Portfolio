@@ -32,7 +32,7 @@ const Process = () => {
         process
       </p>
       <div className="flex flex-col lg:flex-row justify-between items-start h-fit lg:h-[70vh]">
-        <div className="flex flex-col justify-between items-start gap-10 h-full w-full">
+        <div className="flex flex-col justify-between items-start gap-10 h-full w-full lg:w-[20vw]">
           <h1 className="text-[36px] lg:text-[54px] leading-10 lg:leading-12 font-instrumentRegular tracking-tighter font-extralight flex flex-col ">
             A restrained{" "}
             <span className="font-instrumentItalic text-[#6A4F3B]">
@@ -50,7 +50,7 @@ const Process = () => {
             </div>
           </div>
         </div>
-        <div className="w-full">
+        <div>
           <Card />
         </div>
       </div>
