@@ -121,10 +121,10 @@ export const mappingData4 = [
 ];
 
 export const headerNavigation = [
-  { label: "Home", url: "#" },
-  { label: "About", url: "#" },
-  { label: "Products", url: "#" },
-  { label: "Enquiry", url: "#" },
+  { label: "Home", url: "/" },
+  { label: "About", url: "/about/aarcane-doors" },
+  { label: "Products", url: "/product/aarcane-doors" }, 
+  { label: "Enquiry", url: "/enquiry/say-hello" },
 ];
 
 export const FormInputs = [
