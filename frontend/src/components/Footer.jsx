@@ -8,18 +8,18 @@ const Footer = () => {
           key={index}
           className="flex flex-col justify-start items-start truncate group cursor-pointer w-fit"
         >
-          <span className="flex justify-start items-end">
+          <span className="flex justify-start items-end truncate">
             {i}
-            <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out" />
+            <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out hidden lg:block" />
           </span>
-          <span className="w-[50%] group-hover:w-[100%]  duration-500 ease-in-out border-[0.01px]" />
+          <span className="w-[50%] group-hover:w-[100%]  duration-500 ease-in-out border-[0.01px] hidden lg:block" />
         </li>
       ))}
     </ul>
   );
   return (
-    <div className="h-[50vh] bg-[#26211C] w-full flex flex-col justify-end items-center text-[#F6F2EA] text-[17px] px-40 py-10 gap-10">
-      <div className="flex justify-between items-start w-full">
+    <div className="h-fit lg:h-[50vh] bg-[#26211C] w-full flex flex-col justify-end items-center text-[#F6F2EA] text-[17px] px-5 lg:px-40 py-5 lg:py-10 gap-10">
+      <div className="flex flex-col lg:flex-row justify-between items-start w-full">
         <div className="flex flex-col justify-start items-start gap-5">
           <h1 className="capitalize text-[24px] font-instrumentRegular">
             aarcane{" "}
