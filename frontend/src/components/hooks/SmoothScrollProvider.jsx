@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 // import { createLenis, setLenis } from "@/lib/lenis";
-import { createLenis, setLenis } from "../lib/lenis";
+// import { createLenis, setLenis } from "../lib/lenis";
+import { createLenis, setLenis } from "../../lib/lenis";
 
 export default function SmoothScrollProvider({ children }) {
   const rafRef = useRef(null);
