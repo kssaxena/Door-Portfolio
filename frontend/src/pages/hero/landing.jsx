@@ -7,7 +7,7 @@ const Landing = () => {
   const imageRef = useRef(null);
   const { y, scale } = useParallax(imageRef);
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full lg:px-40 py-20 relative">
+    <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full lg:px-40 px-5 py-20 relative">
       {/* <p className="absolute top-20 left-20 text-xs uppercase ">obs 01</p> */}
       <div className="w-full lg:w-[40%] flex flex-col justify-start items-start gap-10">
         <h1 className="text-[46px] lg:text-[80px] leading-10 lg:leading-20 font-instrumentRegular tracking-tighter font-extralight">
