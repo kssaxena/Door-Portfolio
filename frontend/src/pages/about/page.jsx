@@ -122,11 +122,9 @@ const About = () => {
             "Build lasting relationships through quality and trust.",
             // "Transform entrances into timeless architectural statements.",
           ].map((i, index) => (
-            <ul className="border p-4 h-58 w-64 flex flex-col justify-between items-start ">
+            <ul className="border-[0.1px] rounded-sm p-4 h-58 w-64 flex flex-col justify-between items-start ">
               <span>- M 0/{index + 1}</span>
-              <li className="font-instrumentItalic tracking-widest font-extralight">
-                {i}
-              </li>
+              <li className="font-instrumentItalic font-extralight">{i}</li>
             </ul>
           ))}
         </div>
