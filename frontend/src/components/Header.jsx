@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { headerNavigation } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
+import { IoIosArrowRoundUp } from "react-icons/io";
 
 const Header = () => {
   const [clicked, onClicked] = useState(false);
   const navigate = useNavigate();
+
   return (
     <div className="flex justify-between items-center w-full md:px-20 px-5 py-4 text-sm  border-b-[0.2px] border-neutral-400">
       <button
@@ -40,6 +42,12 @@ const Header = () => {
           />
         </div>
       </div>
+      <button
+        onClick={() => window.scrollTo(0, 0)}
+        className="fixed bottom-10 right-10 bg-[#6A4F3B] p-2 rounded-xl"
+      >
+        <IoIosArrowRoundUp className="text-2xl text-white" />
+      </button>
     </div>
   );
 };
