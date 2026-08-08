@@ -12,7 +12,6 @@ const Footer = () => {
             {i}
             <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out hidden lg:block" />
           </span>
-          <span className="w-[50%] group-hover:w-[100%]  duration-500 ease-in-out border-[0.01px] hidden lg:block" />
         </li>
       ))}
     </ul>
