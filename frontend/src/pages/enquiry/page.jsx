@@ -25,17 +25,17 @@ const formInputs = [
 
 const Enquiry = () => {
   return (
-    <div className="flex justify-between items-start w-full relative py-20 px-10">
+    <div className="flex flex-col lg:flex-row justify-between items-start w-full relative lg:py-20 py-10 lg:px-10 gap-20">
       <div>
         <h1 className="text-[46px] lg:text-[80px] leading-10 lg:leading-20 font-instrumentRegular tracking-tighter font-extralight sticky top-0 left-0">
           Reach Out
         </h1>
       </div>
-      <div className="w-[60vw] bg-[#26211ce6] flex flex-col items-start gap-20 p-10 text-[#F6F2EA] rounded-md">
+      <div className="w-full lg:w-[60vw] bg-[#26211ce6] flex flex-col items-start gap-20 p-10 text-[#F6F2EA] rounded-md">
         <h1 className="text-[46px] lg:text-[80px] leading-10 lg:leading-20 font-instrumentRegular tracking-tighter font-extralight">
           Tell us what you desire...
         </h1>
-        <form className="grid grid-cols-2 w-full gap-5">
+        <form className="grid grid-cols-1 lg:grid-cols-2 w-full gap-5">
           {formInputs.map((i, index) => (
             <div key={index}>
               <InputWrapper
@@ -46,8 +46,8 @@ const Enquiry = () => {
             </div>
           ))}
           <div className=" flex justify-end items-end gap-4">
-            <ButtonWrapper label={"Submit"} />
             <ButtonWrapper label={"Reset"} />
+            <ButtonWrapper label={"Submit"} />
           </div>
         </form>
       </div>

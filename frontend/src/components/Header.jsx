@@ -36,15 +36,15 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center w-full md:px-20 px-5 py-4 text-sm border-b-[0.2px] border-neutral-400">
       {/* Logo */}
-      <button
-        onClick={() => navigate("/")}
+      <TransitionLink
+        to={"/"}
         className="capitalize text-2xl font-instrumentRegular"
       >
         aarcane{" "}
         <span className="font-instrumentItalic text-base capitalize">
           internaltional
         </span>
-      </button>
+      </TransitionLink>
       <div>
         <h1 className="hidden lg:flex justify-center items-center gap-10">
           {headerNavigation.map((i, index) => (
