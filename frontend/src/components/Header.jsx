@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { headerNavigation } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundUp } from "react-icons/io";
+import TransitionLink from "./hooks/TransitionHook";
 
 const Header = () => {
   const [clicked, onClicked] = useState(false);
@@ -47,9 +48,9 @@ const Header = () => {
       <div>
         <h1 className="hidden lg:flex justify-center items-center gap-10">
           {headerNavigation.map((i, index) => (
-            <a href={i.url} key={index}>
+            <TransitionLink to={i.url} key={index}>
               {i.label}
-            </a>
+            </TransitionLink>
           ))}
         </h1>
       </div>
