@@ -3,10 +3,13 @@ import { headerNavigation } from "../constants/constants";
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import TransitionLink from "./hooks/TransitionHook";
+import { IoClose, IoMenu } from "react-icons/io5";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
   const [clicked, onClicked] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [hamburger, setShowHamburger] = useState(false);
 
   const navigate = useNavigate();
 
@@ -55,31 +58,41 @@ const Header = () => {
         </h1>
       </div>
 
-      {/* Mobile Menu */}
-      <div className="block lg:hidden">
-        <div
-          className="flex flex-col gap-1"
-          onClick={() => {
-            clicked ? onClicked(false) : onClicked(true);
-          }}
-        >
-          <div
-            className={`w-5 border ${
-              clicked
-                ? "rotate-45 translate-x-0.5 duration-500 ease-in-out"
-                : ""
-            }`}
-          />
-
-          <div
-            className={`w-5 border ${
-              clicked
-                ? "-rotate-45 -translate-y-1.5 duration-500 ease-in-out"
-                : ""
-            }`}
-          />
-        </div>
-      </div>
+      {/* hamburger  */}
+      <button
+        onClick={() => setShowHamburger(true)}
+        className="block lg:hidden"
+      >
+        <IoMenu className="text-2xl" />
+      </button>
+      <AnimatePresence>
+        {hamburger && (
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ type: "spring", duration: 0.4, ease: "easeInOut" }}
+            className="fixed top-0 right-0 w-[80vw] h-screen bg-[#26211C] z-50 text-[#F6F2EA] flex justify-center items-center text-2xl"
+          >
+            <button
+              onClick={() => setShowHamburger(false)}
+              className="absolute top-10 left-10"
+            >
+              <IoClose />
+            </button>
+            <h1
+              className="flex flex-col justify-center items-center gap-10"
+              onClick={() => setShowHamburger(false)}
+            >
+              {headerNavigation.map((i, index) => (
+                <TransitionLink to={i.url} key={index}>
+                  {i.label}
+                </TransitionLink>
+              ))}
+            </h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Scroll To Top */}
       {showScrollTop && (

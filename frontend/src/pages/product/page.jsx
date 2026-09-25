@@ -13,6 +13,7 @@ import {
 import ButtonWrapper from "../../components/Button";
 import InputWrapper from "../../components/Input";
 import { collections, products } from "../../constants/constants";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Products = () => {
   const [activeCollection, setActiveCollection] = useState("all");
@@ -461,82 +462,91 @@ const Products = () => {
           </div>
         )}
       </section>
-
-      {selectedProduct && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
-          onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              setSelectedProduct(null);
-            }
-          }}
-        >
-          <div className="relative grid max-h-[90vh] w-full max-w-5xl overflow-auto bg-[#f5f2ed] md:grid-cols-2">
-            {/* CLOSE */}
-
-            <button
-              onClick={() => setSelectedProduct(null)}
-              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center bg-black/70 text-white"
+      <AnimatePresence>
+        {selectedProduct && (
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ type: "spring", duration: 0.4, ease: "easeInOut" }}
+            className="fixed top-0 left-0 h-screen w-full flex justify-center items-center z-50 "
+          >
+            <div
+              className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) {
+                  setSelectedProduct(null);
+                }
+              }}
             >
-              <FiX />
-            </button>
+              <div className="relative grid max-h-[90vh] w-full max-w-5xl overflow-auto bg-[#f5f2ed] md:grid-cols-2">
+                {/* CLOSE */}
 
-            {/* IMAGE */}
+                <button
+                  onClick={() => setSelectedProduct(null)}
+                  className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center bg-black/70 text-white"
+                >
+                  <FiX />
+                </button>
 
-            <div className="min-h-[400px] bg-[#dedbd5]">
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.code}
-                className="h-full w-full object-cover"
-              />
-            </div>
+                {/* IMAGE */}
 
-            {/* INFO */}
-
-            <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14 lg:gap-3">
-              <div className="mb-4 text-[9px] uppercase tracking-[0.3em] text-[#9b7840]">
-                {getCollection(selectedProduct.collection)?.name}
-              </div>
-              <h2 className="text-[46px] lg:text-[80px] leading-10 lg:leading-20 font-instrumentRegular tracking-tighter font-extralight">
-                {selectedProduct.code}
-              </h2>
-              <div className="mt-3 text-xs uppercase tracking-[0.2em] text-[#1d1a17]/45">
-                {selectedProduct.category}
-              </div>
-              <div className="my-2 h-px bg-[#1d1a17]/10" />
-              <p className="text-sm leading-4 text-[#5d574f]">
-                {getCollection(selectedProduct.collection)?.description}
-              </p>
-              <div className="mt-2 grid grid-cols-2 border-y border-[#1d1a17]/10 py-5">
-                <div>
-                  <div className="text-[8px] uppercase tracking-[0.2em] text-[#1d1a17]/40">
-                    Collection
-                  </div>
-
-                  <div className="mt-2 font-serif text-lg">
-                    {getCollection(selectedProduct.collection)?.shortName}
-                  </div>
+                <div className="min-h-[400px] bg-[#dedbd5]">
+                  <img
+                    src={selectedProduct.image}
+                    alt={selectedProduct.code}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
 
-                <div>
-                  <div className="text-[8px] uppercase tracking-[0.2em] text-[#1d1a17]/40">
-                    Catalogue Page
-                  </div>
+                {/* INFO */}
 
-                  <div className="mt-2 font-serif text-lg">
-                    {selectedProduct.page}
+                <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14 lg:gap-3">
+                  <div className="mb-4 text-[9px] uppercase tracking-[0.3em] text-[#9b7840]">
+                    {getCollection(selectedProduct.collection)?.name}
                   </div>
+                  <h2 className="text-[46px] lg:text-[80px] leading-10 lg:leading-20 font-instrumentRegular tracking-tighter font-extralight">
+                    {selectedProduct.code}
+                  </h2>
+                  <div className="mt-3 text-xs uppercase tracking-[0.2em] text-[#1d1a17]/45">
+                    {selectedProduct.category}
+                  </div>
+                  <div className="my-2 h-px bg-[#1d1a17]/10" />
+                  <p className="text-sm leading-4 text-[#5d574f]">
+                    {getCollection(selectedProduct.collection)?.description}
+                  </p>
+                  <div className="mt-2 grid grid-cols-2 border-y border-[#1d1a17]/10 py-5">
+                    <div>
+                      <div className="text-[8px] uppercase tracking-[0.2em] text-[#1d1a17]/40">
+                        Collection
+                      </div>
+
+                      <div className="mt-2 font-serif text-lg">
+                        {getCollection(selectedProduct.collection)?.shortName}
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="text-[8px] uppercase tracking-[0.2em] text-[#1d1a17]/40">
+                        Catalogue Page
+                      </div>
+
+                      <div className="mt-2 font-serif text-lg">
+                        {selectedProduct.page}
+                      </div>
+                    </div>
+                  </div>
+                  <ButtonWrapper
+                    className="w-fit"
+                    label={"Print catalogue"}
+                    onClick={printWebCatalogue}
+                  />
                 </div>
               </div>
-              <ButtonWrapper
-                className="w-fit"
-                label={"Print catalogue"}
-                onClick={printWebCatalogue}
-              />
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* =================================================
           PRINT STYLES
