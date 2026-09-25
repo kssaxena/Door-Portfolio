@@ -10,7 +10,7 @@ const Footer = () => {
         >
           <span className="flex justify-start items-end truncate">
             {i}
-            <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out hidden lg:block" />
+            {/* <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out hidden lg:block" /> */}
           </span>
         </li>
       ))}
