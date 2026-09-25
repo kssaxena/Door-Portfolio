@@ -4,13 +4,13 @@ import InputWrapper from "./Input";
 
 const EnquiryForm = () => {
   return (
-    <div className="flex justify-between items-center lg:px-40 px-5 py-5 lg:py-20 h-[95vh] relative">
+    <div className="flex justify-between items-center lg:px-40 px-5 py-5 lg:py-20 h-[95vh] relative gap-10">
       <div className="hidden lg:flex w-full lg:w-[60%] overflow-hidden rounded-sm">
         <div className="w-full lg:w-[650px] h-full lg:h-[500px]">
           <img
             className="w-full h-full object-cover"
             src={
-              "https://ik.imagekit.io/jarvisai/Arcane%20Doors/Hero_landing.png"
+              "https://ik.imagekit.io/jarvisai/Arcane%20Doors/ChatGPT%20Image%20Sep%2024,%202026,%2003_55_13%20PM.png"
             }
           />
         </div>
