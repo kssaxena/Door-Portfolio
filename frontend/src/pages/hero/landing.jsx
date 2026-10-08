@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useParallax } from "../../components/hooks/ParallaxImage";
 import { useRef } from "react";
 import ButtonWrapper from "../../components/Button";
+import TransitionLink from "../../components/hooks/TransitionHook";
 
 const Landing = () => {
   const imageRef = useRef(null);
@@ -24,7 +25,13 @@ const Landing = () => {
           durability, and timeless design for homes that deserve an
           extraordinary welcome.
         </h1>
-        <ButtonWrapper label={"Explore Collection"} />
+        <ButtonWrapper
+          label={
+            <TransitionLink to={"/product/aarcane-doors"}>
+              Explore Collection
+            </TransitionLink>
+          }
+        />
       </div>
       <div
         className="w-full lg:w-[60%]"
