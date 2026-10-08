@@ -1,3 +1,5 @@
+import TransitionLink from "./hooks/TransitionHook";
+
 const Footer = () => {
   const LinkMap = ({ data }) => (
     <ul className="flex flex-col gap-2">
@@ -6,13 +8,13 @@ const Footer = () => {
           key={index}
           className="flex flex-col justify-start items-start truncate group cursor-pointer w-fit"
         >
-          <a
-            href={i.url}
+          <TransitionLink
+            to={i.url}
             target={i.targetBlank === true ? "blank" : ""}
             className="flex justify-start items-end truncate"
           >
             {i.label}
-          </a>
+          </TransitionLink>
         </li>
       ))}
     </ul>
@@ -42,9 +44,9 @@ const Footer = () => {
           <div className="border-[0.5px] w-5" />
           <LinkMap
             data={[
-              { label: "About" },
-              { label: "Contact Us" },
-              { label: "Begin Enquiry" },
+              { label: "About", url: "/about/aarcane-doors" },
+              { label: "Contact Us", url: "/enquiry/say-hello" },
+              { label: "Begin Enquiry", url: "/enquiry/say-hello" },
             ]}
           />
         </div>

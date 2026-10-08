@@ -6,7 +6,7 @@ const EnquiryForm = () => {
   return (
     <div className="flex justify-between items-center lg:px-40 px-5 py-5 lg:py-20 h-[95vh] relative gap-10">
       <div className="hidden lg:flex w-full lg:w-[60%] overflow-hidden rounded-sm">
-        <div className="w-full lg:w-[650px] h-full lg:h-[500px]">
+        <div className="w-full h-full">
           <img
             className="w-full h-full object-cover"
             src={
