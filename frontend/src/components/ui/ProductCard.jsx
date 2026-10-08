@@ -1,6 +1,7 @@
 import { MdDescription } from "react-icons/md";
 import ButtonWrapper from "../Button";
 import { mappingData } from "../../constants/constants";
+import TransitionLink from "../hooks/TransitionHook";
 
 const ProductCard = ({ data = mappingData }) => {
   return data.map((d, index) => (
@@ -22,7 +23,13 @@ const ProductCard = ({ data = mappingData }) => {
           </h1>
           <p className="text-[18px]">{d.description}</p>
           <div className="border-[0.5px] w-10" />
-          <ButtonWrapper label={"Explore Collection"} />
+          <ButtonWrapper
+            label={
+              <TransitionLink to={"/product/aarcane-doors"}>
+                Explore Collection
+              </TransitionLink>
+            }
+          />
         </div>
       </div>
     </div>
