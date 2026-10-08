@@ -1,5 +1,3 @@
-import { IoIosArrowRoundForward } from "react-icons/io";
-
 const Footer = () => {
   const LinkMap = ({ data }) => (
     <ul className="flex flex-col gap-2">
@@ -8,10 +6,13 @@ const Footer = () => {
           key={index}
           className="flex flex-col justify-start items-start truncate group cursor-pointer w-fit"
         >
-          <span className="flex justify-start items-end truncate">
-            {i}
-            {/* <IoIosArrowRoundForward className="text-xl group-hover:-rotate-45 duration-700 ease-in-out hidden lg:block" /> */}
-          </span>
+          <a
+            href={i.url}
+            target={i.targetBlank === true ? "blank" : ""}
+            className="flex justify-start items-end truncate"
+          >
+            {i.label}
+          </a>
         </li>
       ))}
     </ul>
@@ -39,17 +40,41 @@ const Footer = () => {
         <div className=" flex flex-col justify-start items-start gap-2">
           <p>Quick Links</p>
           <div className="border-[0.5px] w-5" />
-          <LinkMap data={["About", "Contact Us", "Begin Enquiry"]} />
+          <LinkMap
+            data={[
+              { label: "About" },
+              { label: "Contact Us" },
+              { label: "Begin Enquiry" },
+            ]}
+          />
         </div>
         <div className=" flex flex-col justify-start items-start gap-2">
           <p>Showcase</p>
           <div className="border-[0.5px] w-5" />
-          <LinkMap data={["Products", "Catalogue", "Terms of Service"]} />
+          <LinkMap
+            data={[
+              { label: "Products", url: "/product/aarcane-doors" },
+              { label: "Catalogue", url: "/product/aarcane-doors" },
+              { label: "Terms of Service", url: "/tos/terms-of-service" },
+            ]}
+          />
         </div>
         <div className=" flex flex-col justify-start items-start gap-2">
           <p>Quick Links</p>
           <div className="border-[0.5px] w-5" />
-          <LinkMap data={["aarcaneinternational@gmail.com", "Begin Enquiry"]} />
+          <LinkMap
+            data={[
+              {
+                targetBlank: true,
+                label: "aarcaneinternational@gmail.com",
+                url: "https://mail.google.com/mail/?view=cm&fs=1&to=aarcaneinternational@gmail.com.com&su=Door%20Booking&body=",
+              },
+              {
+                label: "Begin enquiry",
+                url: "https://mail.google.com/mail/?view=cm&fs=1&to=ariserstradco@gmail.com&su=Door%20Booking&body=",
+              },
+            ]}
+          />
         </div>
       </div>
       <div className="border-t w-full flex justify-between items-center pt-5 text-xs">
