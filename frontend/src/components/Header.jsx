@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
 import { headerNavigation } from "../constants/constants";
-import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundUp } from "react-icons/io";
 import TransitionLink from "./hooks/TransitionHook";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Header = () => {
-  const [clicked, onClicked] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [hamburger, setShowHamburger] = useState(false);
-
-  const navigate = useNavigate();
+  const location = window.location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +48,11 @@ const Header = () => {
       <div>
         <h1 className="hidden lg:flex justify-center items-center gap-10">
           {headerNavigation.map((i, index) => (
-            <TransitionLink to={i.url} key={index}>
+            <TransitionLink
+              to={i.url}
+              key={index}
+              className={`${location === i.url ? "underline" : ""}`}
+            >
               {i.label}
             </TransitionLink>
           ))}
@@ -85,7 +86,11 @@ const Header = () => {
               onClick={() => setShowHamburger(false)}
             >
               {headerNavigation.map((i, index) => (
-                <TransitionLink to={i.url} key={index}>
+                <TransitionLink
+                  className={`${location === i.url ? "underline" : ""}`}
+                  to={i.url}
+                  key={index}
+                >
                   {i.label}
                 </TransitionLink>
               ))}
