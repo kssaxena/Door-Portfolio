@@ -65,6 +65,13 @@ export const mappingData2 = [
     quotation: "Imperial Collection",
     description:
       "Crafted for luxury residences, the Imperial Collection blends intricate detailing with high-grade engineering to create entrances that command attention.",
+    paragraphs: [
+      "A door is more than a point of entry; it establishes the first impression of a space. The entrance shown here has been considered as an architectural element rather than simply a functional opening.",
+
+      "Its proportions, dark timber finish, substantial framing, and restrained hardware create a sense of permanence. The surrounding warm lighting further emphasizes the depth and texture of the door while connecting it naturally with the interior architecture.",
+
+      "The composition demonstrates how an entrance can introduce the character of an entire residence before the visitor has even entered the space.",
+    ],
   },
   // {
   //   image:
@@ -83,6 +90,8 @@ export const mappingData3 = [
     quotation: "When light stops performing",
     description:
       "Evening spaces become more comfortable when light is controlled rather than maximized.",
+    paragraph:
+      "The concept of Observation challenges the modern urge to flood every corner with illumination, proposing instead that there is profound beauty in restraint. Embracing the idea that When light stops performing, it shifts the focus from sheer visibility to curated ambiance. By carefully controlling rather than maximizing light sources, evening spaces shed their harsh daytime utility and transform into intimate, comfortable sanctuaries that invite genuine relaxation and shadow-play.",
   },
   {
     image: "https://ik.imagekit.io/jarvisai/Arcane%20Doors/Hero_SmallCard2.png",
@@ -90,6 +99,8 @@ export const mappingData3 = [
     quotation: "The quite work of Thresholds",
     description:
       "Doors, reveals, steps, and changes in floor finish create a slower rhythm through the room.",
+    paragraph:
+      "During an aarcane visit, one begins to notice The quiet work of Thresholds and how architectural subtleties deliberately shape human movement. It is not just about moving from one room to another; it is about the physical transitions—doors, reveals, subtle steps, and shifts in floor finishes—that naturally decelerate our pace. These intentional design choices dictate a slower, more deliberate rhythm through the room, allowing occupants to experience the space with a grounded, heightened awareness rather than simply rushing through it.",
   },
   {
     image: "https://ik.imagekit.io/jarvisai/Arcane%20Doors/Hero_SmallCard3.png",
@@ -97,6 +108,8 @@ export const mappingData3 = [
     quotation: "We offer for ages",
     description:
       "A short study on filled stone, open pores, and the way use changes the reading of a surface.",
+    paragraph:
+      "A careful material note reveals the living, tactile nature of architectural surfaces, particularly through the lens of durability and time. Guided by the philosophy that We offer for ages, this approach examines the rich, raw textures of filled stone and open pores. It acknowledges that a surface is never truly static; instead, the continuous friction of daily use gradually changes how the material is read, wearing in a natural patina that visually records the passage of time and the life lived within the space.",
   },
 ];
 
