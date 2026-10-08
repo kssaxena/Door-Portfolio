@@ -9,7 +9,7 @@ const ProductCard = ({ data = mappingData }) => {
       key={index}
       className={`h-fit lg:h-100 md:w-[80vw] w-full border-[0.2px] border-neutral-300 rounded overflow-hidden flex flex-col justify-center items-center ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}
     >
-      <div className="w-full lg::w-[50%] h-full">
+      <div className="w-full lg:w-[50%] h-full">
         <img src={d.image} className="object-fill h-full w-full" />
       </div>
       <div className="w-full md:w-[50%] h-full md:px-10 flex flex-col justify-center items-start">

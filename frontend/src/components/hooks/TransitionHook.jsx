@@ -1,7 +1,13 @@
 import { useContext } from "react";
 import { TransitionContext } from "../../App";
 
-const TransitionLink = ({ to, children, className, close }) => {
+const TransitionLink = ({
+  to,
+  children,
+  className,
+  close,
+  target = "blank",
+}) => {
   const transitionTo = useContext(TransitionContext);
 
   const handleClick = (e) => {
@@ -11,7 +17,7 @@ const TransitionLink = ({ to, children, className, close }) => {
   };
 
   return (
-    <a href={to} onClick={handleClick} className={className}>
+    <a href={to} onClick={handleClick} className={className} target={target}>
       {children}
     </a>
   );
