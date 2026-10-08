@@ -3,9 +3,9 @@ import { data } from "../../constants/constants";
 const DoorTypes = () => {
   return (
     <div className="px-5 md:px-40 py-20 relative">
-      <p className="absolute top-20 right-10 md:left-20 text-xs ">POSITION</p>
+      <p className="absolute top-10 right-10 md:left-20 text-xs">POSITION</p>
       <div className="flex flex-col justify-start items-start gap-10">
-        <h1 className="text-[46px] lg:text-[80px] leading-10 md:leading-20 font-instrumentRegular tracking-tighter font-extralight w-[60vw]">
+        <h1 className="text-[46px] lg:text-[80px] leading-12 lg:leading-20 font-instrumentRegular tracking-tighter font-extralight w-full lg:w-[60vw]">
           We believe every entrance should reflect,{" "}
           {/* <span className="font-instrumentItalic text-[#6A4F3B]">kept,</span> */}
           confidence{" "}
